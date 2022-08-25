@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Raleway:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@1&display=swap');
+*
+{
+  margin: 0;/*MARGEM*/
+  padding: 0;
+  box-sizing: border-box;/*DIMENSIONAMENTO DA CAIXA*/
+  
+}
+
+body
+{
+  display: flex;
+  justify-content: center;/*justificar o conteúdo*/
+  align-items: center;
+  min-height: 100vh;/*altura mínima*/
+  background: linear-gradient(45deg, #050665, #acb2d7);
+}
+
+.card
+{
+  position: relative;
+  width: 350px;
+  height: 190px;
+  /*height: 450px;/ 190px volta a outra caixa a funcionar*/
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 35px 100px rgba(0,0,0,0.15);/*Sombra da caixa*/
+  transition: 0.5s;
+}
+
+.card:hover
+{
+
+
+}
+
+.card:hover
+{
+  height: 450px;
+}
+
+ .pozeBx
+ {
+   position: absolute; 
+   left: 50%; 
+   top: -50px;
+   transform: translateX(-50%) ;
+   width: 150px;
+   height: 150px;
+   background: #fff;
+   border-radius: 20px;
+   box-shadow: 0 15px 50px rgba(0,0,0,0.35) ;/*Sombra da caixa*/
+   overflow: hidden;/*transbordar*/
+   transition: 00.5s;/*transição*/
+ }
+
+.card:hover .pozeBx /*minha imagem*/
+{
+  width: 220px; /*Largura*/
+  height: 220px;/*altura*/
+
+}
+
+ .pozeBx img
+{
+  position: absolute;/*posição*/
+  top: 0; /*cima*/
+  left: 0;/*esquerdo*/
+  width: 100%; /*Largura*/
+  height: 100%;/*altura*/
+  object-fit: cover;/*ajuste de objeto*/
+}
+
+.card .content  /* configuracao Ux/ui */
+{
+  position: absolute; /*posição*/
+  width: 100%; /*Largura*/
+  height: 100%; /*altura*/
+  display: flex; /*exibição*/
+  justify-content: center; /*justificar o conteúdo*/
+  align-items: flex-end; /*alinhar itens*/
+  overflow: hidden;
+}
+
+.card .content .details
+{
+  padding: 40px;/*preenchimento*/
+  text-align: center;/*alinhamento de texto*/
+  width: 100%; /*Largura*/
+  transition: 0.5s;
+  transform: translateY(150px);
+}
+
+.card:hover .content .details
+{
+  transform: translateY(0px);
+
+}
+.card .content .details h2
+{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.2em;
+}
+
+.card .content .details h2 span
+{
+  
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 0.;
+}
+
+.card .content .details .data
+{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.card .content .details .data h3
+{
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.card .content .details .data h3 span
+{
+  font-size: 0.85em;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.card .content .details .actionBtn
+{
+  display: flex;
+  justify-content: space-between;
+  /*gap: 20px; Gap = Vão*/
+}
+
+.card .content .details .actionBtn button
+{
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(45deg, #050665, #acb2d7);
+  cursor: pointer;
+}
+
+.card .content .details .actionBtn button:nth-child(2)
+{
+  border: 1px solid #999;
+  color: #999;
+  background: #fff;
+}
+
